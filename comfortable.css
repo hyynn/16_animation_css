@@ -83,12 +83,12 @@ header nav .gnb li a {color: #fff;padding: 25px;display: block;padding: 25px;}
 /* #visual .text:hover ul li span {margin-left: 0; opacity: 1;} */
 #visual .text ul li span.space {margin-bottom: 20px;}
 
-#visual .playbtn {position: absolute;left: 50%;top: 50%;transform: translate(-550px,-50%);}
+#visual .playBtn {position: absolute;left: 50%;top: 50%;transform: translate(-550px,-50%);}
 /* translate(-50%-50%)는 본인 크기 기준 */
 
-#visual .playbtn audio {width: 300px;height: 50px;}
-#visual .playbtn img {cursor:pointer}
-#visual .playbtn img#pausebtn {display: none;}
+#visual .playBtn audio {width: 300px;height: 50px;}
+#visual .playBtn img {cursor:pointer}
+#visual .playBtn img#pauseBtn {display: none;}
 
 .lights1 {width: 100%;height: 100%;position: absolute;background: url(lights.png); animation: lights 15s linear infinite;opacity: 0.1;}
 @keyframes lights {

@@ -29,10 +29,10 @@
     
     <div class="hero"><img src="hero.png" alt=""></div>
 
-        <div class="playbtn">
+        <div class="playBtn">
             <audio id="audio" src="H.E.R. - Comfortable (Official Audio).mp4"></audio>
-            <img id="playbtn" src="btn_play.png" alt="플레이">
-            <img id="pausebtn" src="btn_pause.png" alt="일시중지" >
+            <img id="playBtn" src="btn_play.png" alt="플레이">
+            <img id="pauseBtn" src="btn_pause.png" alt="일시중지" >
         </div>
       
         <div class="text">
@@ -77,6 +77,46 @@
             </ul>
         </div>
     </div>
+
+
+    <script>// 5초 뒤 자동재생 시도
+setTimeout(function() {
+    audio.play().then(function() {
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
+        pauseBtn.classList.add('pulse'); // 애니메이션 효과 추가
+
+        setTimeout(function() {
+            audio.muted = false;
+        }, 1000);
+    }).catch(function(err) {
+        console.log("자동재생 실패:", err);
+    });
+}, 5000);
+
+// 재생 버튼
+playBtn.addEventListener('click', function() {
+    audio.play();
+    audio.muted = false;
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    pauseBtn.classList.add('pulse'); // 재생 시 애니메이션 추가
+});
+
+// 일시정지 버튼
+pauseBtn.addEventListener('click', function() {
+    audio.pause();
+    pauseBtn.style.display = 'none';
+    playBtn.style.display = 'inline';
+    pauseBtn.classList.remove('pulse'); // 정지 시 애니메이션 제거
+});
+
+// 음악이 끝나면 버튼 초기화
+audio.addEventListener('ended', function() {
+    pauseBtn.style.display = 'none';
+    playBtn.style.display = 'inline';
+    pauseBtn.classList.remove('pulse'); // 음악 끝나면 애니메이션 제거
+});</script>
 
 </body>
 </html>
