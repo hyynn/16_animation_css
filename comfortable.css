@@ -20,7 +20,7 @@ header nav {font-family: 'Paperlogy-2ExtraLight';}
 header nav .gnb {display: flex;}
 header nav .gnb:hover li {opacity: 0.5;transition: 0.3s;filter: blur(1.2px);}
 header nav .gnb:hover li:hover {opacity: 1;font-family: 'Paperlogy-3Light';filter: blur(0);
-    text-shadow: 3px 5px 0 #ffd8bf;}
+    text-shadow: 3px 5px 3px #fff;}
 header nav .gnb li{font-size: 24px;}
 header nav .gnb li a {color: #fff;padding: 25px;display: block;padding: 25px;}
 
@@ -86,7 +86,7 @@ header nav .gnb li a {color: #fff;padding: 25px;display: block;padding: 25px;}
 #visual .playBtn {position: absolute;left: 50%;top: 50%;transform: translate(-550px,-50%);}
 /* translate(-50%-50%)는 본인 크기 기준 */
 
-#visual .playBtn audio {width: 300px;height: 50px;}
+#visual .playBtn audio {width: 300px;height: 50px;display: none;}
 #visual .playBtn img {cursor:pointer}
 #visual .playBtn img#pauseBtn {display: none;}
 
